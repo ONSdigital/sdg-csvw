@@ -1,0 +1,60 @@
+{
+  "@context": [
+  "http://www.w3.org/ns/csvw",
+  {
+    "@language": "en"
+  }
+],
+  "tables": [
+    {
+      "url": "indicator_1-2-1.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "Year",
+            "required": true,
+            "name": "year",
+            "datatype": "integer"
+          }, {
+            "titles": "Sex",
+            "required": false,
+            "name": "sex",
+            "datatype": {
+              "base": "string",
+              "format": "^(Male|Female)$"
+            }
+          }, {
+            "titles": "Age",
+            "required": false,
+            "name": "age",
+            "datatype": "string"
+          }, {
+            "titles": "Observation status",
+            "required": true,
+            "name": "observation_status",
+            "datatype": "string"
+          }, {
+            "titles": "Unit multiplier",
+            "required": true,
+            "name": "unit_multiplier",
+            "datatype": "string"
+          }, {
+            "titles": "Unit measure",
+            "required": true,
+            "name": "unit_measure",
+            "datatype": "string"
+          }, {
+            "titles": "Value",
+            "required": false,
+            "name": "value",
+            "datatype": "number"
+          }
+        ],
+        "primaryKey": [
+          "year", "sex", "age", "observation_status",
+          "unit_multiplier", "unit_measure"
+        ]
+      }
+    }
+  ]
+}
